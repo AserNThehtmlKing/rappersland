@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://rappersland.netlify.app/</title>
+  <link>https://rappersland.netlify.app/</link>
+
+<item>
+     <link>https://rappersland.netlify.app/</link>
+     <title>RappersLand</title>
+     <description>RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/free.html</link>
+     <title>RappersLand | Learn How to Freestyle Rap</title>
+     <description>RappersLand | Learn How to Freestyle Rap</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/art.html</link>
+     <title>RappersLand | The Art of Freestyle Rapping</title>
+     <description>RappersLand | The Art of Freestyle Rapping</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/famerappers.html</link>
+     <title>Famous Rappers to Follow | RappersLand</title>
+     <description>Famous Rappers to Follow | RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/index.html</link>
+     <title>RappersLand</title>
+     <description>RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/eminem.html</link>
+     <title>Eminem Blog | RappersLand</title>
+     <description>Eminem Blog | RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/jay-z.html</link>
+     <title>Jay-Z Blog | RappersLand</title>
+     <description>Jay-Z Blog | RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/kendrick-lamar.html</link>
+     <title>Kendrick Lamar Blog | RappersLand</title>
+     <description>Kendrick Lamar Blog | RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/lilmabu.html</link>
+     <title>Lil Mabu Blog | RappersLand</title>
+     <description>Lil Mabu Blog | RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/ynw-melly.html</link>
+     <title>YNW Melly Blog | RappersLand</title>
+     <description>YNW Melly Blog | RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/xxx.html</link>
+     <title>XXXTentacion Blog | RappersLand</title>
+     <description>XXXTentacion Blog | RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/lil-wayne.html</link>
+     <title>Lil Wayne Blog | RappersLand</title>
+     <description>Lil Wayne Blog | RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/tupac.html</link>
+     <title>Tupac Blog | RappersLand</title>
+     <description>Tupac Blog | RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/50-cent.html</link>
+     <title>50 Cent Blog | RappersLand</title>
+     <description>50 Cent Blog | RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/dr-dre.html</link>
+     <title>Dr. Dre Blog | RappersLand</title>
+     <description>Dr. Dre Blog | RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/kanye-west.html</link>
+     <title>Kanye West Blog| RappersLand</title>
+     <description>Kanye West Blog| RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://rappersland.netlify.app/drake.html</link>
+     <title>Drake Blog | RappersLand</title>
+     <description>Drake Blog | RappersLand</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
