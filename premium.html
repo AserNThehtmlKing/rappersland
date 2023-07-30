@@ -39,19 +39,10 @@
       margin-bottom: 5px;
     }
 
-    input, select {
+    input {
       padding: 10px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
-    }
-
-    .features {
-      margin-bottom: 15px;
-    }
-
-    .features li {
-      list-style-type: disc;
-      margin-left: 20px;
     }
 
     input[type="submit"] {
@@ -62,6 +53,28 @@
 
     input[type="submit"]:hover {
       background-color: #555;
+    }
+
+    .features {
+      margin-top: 30px;
+    }
+
+    .features h3 {
+      margin: 0;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    .features li {
+      margin-bottom: 5px;
+    }
+
+    .features strong {
+      color: #333;
     }
   </style>
 </head>
@@ -82,33 +95,58 @@
       <label for="password">Password:</label>
       <input type="password" id="password" placeholder="Enter your password" required>
 
-      <label for="subscription">Select a Premium Option:</label>
-      <select id="subscription">
-        <option value="free">Free</option>
-        <option value="gold">Gold</option>
-        <option value="diamond">Diamond</option>
-        <option value="platinum">Platinum</option>
+      <label for="plan">Choose a Subscription Plan:</label>
+      <select id="plan" required>
+        <option value="" disabled selected>Select Plan</option>
+        <option value="basic">Basic</option>
+        <option value="standard">Standard</option>
+        <option value="premium">Premium</option>
       </select>
-
-      <div class="features">
-        <p><strong>Features:</strong></p>
-        <ul id="features-list">
-          <!-- Features for each premium option -->
-          <li data-plan="free">Access to basic blog posts</li>
-          <li data-plan="gold">Access to exclusive blog posts</li>
-          <li data-plan="gold">Ad-free browsing experience</li>
-          <li data-plan="diamond">Early access to new content</li>
-          <li data-plan="diamond">Priority customer support</li>
-          <li data-plan="platinum">Access to premium blog posts</li>
-          <li data-plan="platinum">Ad-free browsing experience</li>
-          <li data-plan="platinum">Early access to new content</li>
-          <li data-plan="platinum">Priority customer support</li>
-          <li data-plan="platinum">Exclusive merchandise discounts</li>
-        </ul>
-      </div>
 
       <input type="submit" value="Sign Up">
     </form>
+
+    <div class="features">
+      <h3>Features:</h3>
+      <ul id="feature-list">
+        <!-- Feature list will be dynamically filled based on the chosen plan -->
+      </ul>
+    </div>
   </div>
+
+  <script>
+    // JavaScript code to populate the features based on the chosen plan
+    const featureList = document.getElementById("feature-list");
+    const selectPlan = document.getElementById("plan");
+
+    selectPlan.addEventListener("change", function () {
+      featureList.innerHTML = ""; // Clear previous features
+
+      const plan = this.value;
+      let features = [];
+
+      // Add features based on the selected plan
+      switch (plan) {
+        case "basic":
+          features = ["Access to selected rap blogs", "Ad-supported"];
+          break;
+        case "standard":
+          features = ["Access to all rap blogs", "Ad-free experience", "Offline listening"];
+          break;
+        case "premium":
+          features = ["Access to all rap blogs", "Ad-free experience", "Offline listening", "Exclusive content"];
+          break;
+        default:
+          break;
+      }
+
+      features.forEach((feature) => {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${feature}</strong>`;
+        featureList.appendChild(li);
+      });
+    });
+  </script>
 </body>
 </html>
+
