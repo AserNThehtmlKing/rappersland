@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up for Premium | RappersLand</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+    }
+
+    .features {
+      margin-bottom: 15px;
+    }
+
+    .features li {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RappersLand</h1>
+  </header>
+
+  <div class="container">
+    <h2>Sign Up for Premium</h2>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter your username" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email address" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+
+      <label for="subscription">Select a Premium Option:</label>
+      <select id="subscription">
+        <option value="free">Free</option>
+        <option value="gold">Gold</option>
+        <option value="diamond">Diamond</option>
+        <option value="platinum">Platinum</option>
+      </select>
+
+      <div class="features">
+        <p><strong>Features:</strong></p>
+        <ul id="features-list">
+          <!-- Features for each premium option -->
+          <li data-plan="free">Access to basic blog posts</li>
+          <li data-plan="gold">Access to exclusive blog posts</li>
+          <li data-plan="gold">Ad-free browsing experience</li>
+          <li data-plan="diamond">Early access to new content</li>
+          <li data-plan="diamond">Priority customer support</li>
+          <li data-plan="platinum">Access to premium blog posts</li>
+          <li data-plan="platinum">Ad-free browsing experience</li>
+          <li data-plan="platinum">Early access to new content</li>
+          <li data-plan="platinum">Priority customer support</li>
+          <li data-plan="platinum">Exclusive merchandise discounts</li>
+        </ul>
+      </div>
+
+      <input type="submit" value="Sign Up">
+    </form>
+  </div>
+</body>
+</html>
