@@ -85,68 +85,33 @@
 
   <div class="container">
     <h2>Sign Up for Premium</h2>
-    <form>
-      <label for="username">Username:</label>
-      <input type="text" id="username" placeholder="Enter your username" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" placeholder="Enter your email address" required>
-
-      <label for="password">Password:</label>
-      <input type="password" id="password" placeholder="Enter your password" required>
-
-      <label for="plan">Choose a Subscription Plan:</label>
-      <select id="plan" required>
-        <option value="" disabled selected>Select Plan</option>
-        <option value="basic">Free</option>
-        <option value="standard">Gold</option>
-        <option value="premium">Diamond</option>
-      </select>
-
-      <input type="submit" value="Sign Up">
-    </form>
-
-    <div class="features">
-      <h3>Features:</h3>
-      <ul id="feature-list">
-        <!-- Feature list will be dynamically filled based on the chosen plan -->
-      </ul>
-    </div>
+<form id = "form" action="">
+    <input type="email" name="" id="email" placeholder="Email">
+    <input type="password" name="" id="password" placeholder="Password">
+    <input type="checkbox" value="Premium" id="checkbox">
+    <input type="submit" value="Submit" id="submit">
+</form>
+<div id="features">
+</div>
   </div>
 
   <script>
-    // JavaScript code to populate the features based on the chosen plan
-    const featureList = document.getElementById("feature-list");
-    const selectPlan = document.getElementById("plan");
-
-    selectPlan.addEventListener("change", function () {
-      featureList.innerHTML = ""; // Clear previous features
-
-      const plan = this.value;
-      let features = [];
-
-      // Add features based on the selected plan
-      switch (plan) {
-        case "basic":
-          features = ["Access to selected rap blogs", "Ad-supported"];
-          break;
-        case "standard":
-          features = ["Access to 10 premium rap blogs a month", "Ad-free experience"];
-          break;
-        case "premium":
-          features = ["Access to all rap blogs", "Ad-free experience",  "Exclusive content"];
-          break;
-        default:
-          break;
-      }
-
-      features.forEach((feature) => {
-        const li = document.createElement("li");
-        li.innerHTML = `<strong>${feature}</strong>`;
-        featureList.appendChild(li);
-      });
-    });
+    const form = document.querySelector('#form')
+    const email = document.querySelector('#email')
+    const password = document.querySelector('#password')
+    if(email.value = ""){
+        form.innerHTML += 'Please enter email.'
+    } else {
+        if(password.value = ""){
+            form.innerHTML += 'Please enter password.'
+        } else {
+            if (password.length < 8){
+                form.innerHTML += 'Password must be 8 or more characters.'
+            } else {
+                form.innerHTML = '<h1> You have made a premium account </h1>'
+            }
+        }
+    }
   </script>
 </body>
 </html>
-
