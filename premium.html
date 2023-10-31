@@ -123,11 +123,11 @@
               // Set profile pic to the favicon
               const favicon = document.querySelector("link[rel~='icon']");
               const faviconSrc = favicon ? favicon.href : 'favicon.png';
-              featuresDiv.innerHTML = `<h1>You have made a account,${firstName}!</h1><img src="${faviconSrc}" alt="Favicon" style="width: 100px; height: 100px;">`;
+              featuresDiv.innerHTML = `<h1>You have made a account, ${firstName}!</h1><img src="${faviconSrc}" alt="Favicon" style="width: 100px; height: 100px;">`;
             } else {
               // Use uploaded profile pic
               // Implement logic to handle the uploaded profile picture if needed
-              featuresDiv.innerHTML = `<h1>You have made a account,${firstName}!</h1>`; // Example output without using the uploaded image
+              featuresDiv.innerHTML = `<h1>You have made a account, ${firstName}!</h1>`; // Example output without using the uploaded image
             }
           }
         }
