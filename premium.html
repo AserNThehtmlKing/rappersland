@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Sign Up for Premium | RappersLand</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -85,33 +86,50 @@
 
   <div class="container">
     <h2>Sign Up for Premium</h2>
-<form id = "form" action="">
-    <input type="email" name="" id="email" placeholder="Email">
-    <input type="password" name="" id="password" placeholder="Password">
-    <input type="checkbox" value="Premium" id="checkbox">
-    <input type="submit" value="Submit" id="submit">
-</form>
-<div id="features">
-</div>
+    <form id="form" action="#">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <input type="file" id="pfp" accept="image/*" placeholder="Profile Picture">
+      <input type="submit" value="Submit" id="submit">
+    </form>
+    <div id="features">
+    </div>
   </div>
 
   <script>
-    const form = document.querySelector('#form')
-    const email = document.querySelector('#email')
-    const password = document.querySelector('#password')
-    if(email.value === ""){
-        form.innerHTML += 'Please enter email.'
-    } else {
-        if(password.value === ""){
-            form.innerHTML += 'Please enter password.'
+    document.getElementById('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const pfp = document.getElementById('pfp').files[0];
+      const form = document.getElementById('form');
+      const featuresDiv = document.getElementById('features');
+
+      if (email === "") {
+        featuresDiv.textContent = 'Please enter an email.';
+      } else {
+        if (password === "") {
+          featuresDiv.textContent = 'Please enter a password.';
         } else {
-            if (password.length < 8){
-                form.innerHTML += 'Password must be 8 or more characters.'
+          if (password.length < 8) {
+            featuresDiv.textContent = 'Password must be 8 or more characters.';
+          } else {
+            if (!pfp) {
+              // Set profile pic to the favicon
+              const favicon = document.querySelector("link[rel~='icon']");
+              const faviconSrc = favicon ? favicon.href : 'favicon.png';
+              featuresDiv.innerHTML = `<h1>You have made a premium account!</h1><img src="${faviconSrc}" alt="Favicon" style="width: 100px; height: 100px;">`;
             } else {
-                form.innerHTML = '<h1> You have made a premium account </h1>'
+              // Use uploaded profile pic
+              // Implement logic to handle the uploaded profile picture if needed
+              featuresDiv.innerHTML = '<h1>You have made a premium account!</h1>'; // Example output without using the uploaded image
             }
+          }
         }
-    }
+      }
+    });
   </script>
 </body>
 </html>
+
