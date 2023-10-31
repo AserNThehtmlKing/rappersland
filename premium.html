@@ -102,8 +102,8 @@
     document.getElementById('form').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent default form submission
 
-      const firstName = document.getElementById('first')
-      const lastName = document.getElementById('last')
+      const firstName = document.getElementById('first').value;
+      const lastName = document.getElementById('last').value;
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
       const pfp = document.getElementById('pfp').files[0];
@@ -136,8 +136,3 @@
   </script>
 </body>
 </html>
-    });
-  </script>
-</body>
-</html>
-
