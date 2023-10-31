@@ -87,6 +87,8 @@
   <div class="container">
     <h2>Sign Up for Premium</h2>
     <form id="form" action="#">
+      <input type="text" name="" id="first" placeholder="First Name">
+      <input type="text" name="" id="last" placeholder="Last Name">
       <input type="email" id="email" placeholder="Email">
       <input type="password" id="password" placeholder="Password">
       <input type="file" id="pfp" accept="image/*" placeholder="Profile Picture">
@@ -100,6 +102,7 @@
     document.getElementById('form').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent default form submission
 
+      const name = document.getElementById('first') + document.getElementById('last')
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
       const pfp = document.getElementById('pfp').files[0];
@@ -119,11 +122,11 @@
               // Set profile pic to the favicon
               const favicon = document.querySelector("link[rel~='icon']");
               const faviconSrc = favicon ? favicon.href : 'favicon.png';
-              featuresDiv.innerHTML = `<h1>You have made a premium account!</h1><img src="favicon.ico" alt="Favicon" style="width: 100px; height: 100px;">`;
+              featuresDiv.innerHTML = `<h1>You have made a account,${name}!</h1><img src="${faviconSrc}" alt="Favicon" style="width: 100px; height: 100px;">`;
             } else {
               // Use uploaded profile pic
               // Implement logic to handle the uploaded profile picture if needed
-              featuresDiv.innerHTML = '<h1>You have made a premium account!</h1>'; // Example output without using the uploaded image
+              featuresDiv.innerHTML = `<h1>You have made a account,${name}!</h1>`; // Example output without using the uploaded image
             }
           }
         }
