@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Sign Up for Premium | RappersLand</title>
-  <link rel="icon" type="image/png" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -28,6 +28,7 @@
       padding: 20px;
       background-color: #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center; /* Added text-align center */
     }
 
     form {
@@ -77,38 +78,49 @@
     .features strong {
       color: #333;
     }
+
+    /* Additional CSS for circular image with no compression */
+    .features {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: inline-block; /* Added display inline-block */
+    }
+
+    .features img {
+      width: 100%; /* Added width 100% */
+      height: 100%; /* Added height 100% */
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>RappersLand</h1>
+    <img id="headerPfp" src="" alt="Profile Picture" style="width: 50px; height: 50px; border-radius: 50%;">
   </header>
+  
 
   <div class="container">
     <h2>Sign Up for Premium</h2>
     <form id="form" action="#">
-      <input type="text" name="" id="first" placeholder="First Name">
-      <input type="text" name="" id="last" placeholder="Last Name">
       <input type="email" id="email" placeholder="Email">
       <input type="password" id="password" placeholder="Password">
       <input type="file" id="pfp" accept="image/*" placeholder="Profile Picture">
       <input type="submit" value="Submit" id="submit">
     </form>
-    <div id="features">
-    </div>
+    <div class="features"></div>
   </div>
 
   <script>
     document.getElementById('form').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent default form submission
 
-      const firstName = document.getElementById('first').value;
-      const lastName = document.getElementById('last').value;
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
       const pfp = document.getElementById('pfp').files[0];
-      const form = document.getElementById('form');
-      const featuresDiv = document.getElementById('features');
+      const featuresDiv = document.querySelector('.features');
 
       if (email === "") {
         featuresDiv.textContent = 'Please enter an email.';
@@ -120,19 +132,27 @@
             featuresDiv.textContent = 'Password must be 8 or more characters.';
           } else {
             if (!pfp) {
-              // Set profile pic to the favicon
-              const favicon = document.querySelector("link[rel~='icon']");
-              const faviconSrc = favicon ? favicon.href : 'favicon.png';
-              featuresDiv.innerHTML = `<h1>You have made a account, ${firstName}!</h1><img src="${faviconSrc}" alt="Favicon" style="width: 100px; height: 100px;">`;
+              featuresDiv.innerHTML = '<h1>You have made a premium account!</h1>';
             } else {
-              // Use uploaded profile pic
-              // Implement logic to handle the uploaded profile picture if needed
-              featuresDiv.innerHTML = `<h1>You have made a account, ${firstName}!</h1>`; // Example output without using the uploaded image
+              const reader = new FileReader();
+              reader.onload = function() {
+                const imgSrc = reader.result;
+                featuresDiv.innerHTML = `<img src="${imgSrc}" alt="Profile Pic">`;
+              }
+              reader.readAsDataURL(pfp);
             }
           }
         }
       }
     });
+  const headerPfp = document.getElementById('headerPfp');
+  const savedPfp = localStorage.getItem('profilePicture');
+
+  if (savedPfp) {
+    headerPfp.src = savedPfp;
+  }
+
   </script>
 </body>
 </html>
+
