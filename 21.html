@@ -127,15 +127,18 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3519807885944437" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <h1>RappersLand</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="premium.html">Premium</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>RappersLand</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="premium.html">Premium</a></li>
+    </ul>
+  </nav>
+  <img id="headerPfp" src="" alt="Profile Picture" style="width: 50px; height: 50px; border-radius: 50%;">
+</header>
+
+
 
   <div class="container">
     <div class="blog-post">
@@ -189,6 +192,15 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3519807885944437" crossorigin="anonymous"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
+    <script>
+  const headerPfp = document.getElementById('headerPfp');
+  const savedPfp = localStorage.getItem('profilePicture');
+
+  if (savedPfp) {
+    headerPfp.src = savedPfp;
+  }
+</script>
+
   </script>
 </body>
 </html>
