@@ -112,6 +112,34 @@
     </form>
     <div class="features"></div>
   </div>
+  
+  <script>
+    document.getElementById('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const pfp = document.getElementById('pfp').files[0];
+      const featuresDiv = document.querySelector('.features');
+
+      if (email === "") {
+        featuresDiv.textContent = 'Please enter an email.';
+      } else {
+        if (password === "") {
+          featuresDiv.textContent = 'Please enter a password.';
+        } else {
+          if (password.length < 8) {
+            featuresDiv.textContent = 'Password must be 8 or more characters.';
+          } else {
+            if (!pfp) {
+              featuresDiv.innerHTML = '<h1>You have made a premium account!</h1>';
+            } 
+            }
+          }
+        }
+    });
+
+  </script>
 </body>
 </html>
 
